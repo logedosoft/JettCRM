@@ -20,12 +20,6 @@ const App = () => {
   let [isStart, setIsStart] = useState(false);
   let [flatListItems, setFlatListItems] = useState([]);
 
-  // const callFriendTapped = () => {
-  //   Linking.openURL('tel:5555555555').catch((err) => {
-  //     console.log(err);
-  //   });
-  // };
-
   useEffect(() => {
     AppState.addEventListener('change', (state) => { console.log("değişti"); });
     AppState.addEventListener('blur', (state) = () => { console.log("blur"); })
@@ -135,18 +129,6 @@ const App = () => {
             ? <Text style={{ color: 'black' }}>{callStates}</Text>
             : <Text style={{ color: 'black' }}>kapandı</Text>
         }
-        {/* <TouchableOpacity
-          activeOpacity={0.7}
-          onPress={callFriendTapped}
-          style={styles.fabStyle}>
-          <Image
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
-            }}
-            style={styles.fabImageStyle}
-          />
-        </TouchableOpacity> */}
       </View>
     </SafeAreaView>
   );
